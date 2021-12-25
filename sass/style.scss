@@ -33,12 +33,12 @@ body {
         margin: 25px;
     }
 
-    .button-1{
+    .button-1 {
         overflow: hidden;
     }
 
-    .button-1:before{
-        content: '';
+    .button-1:before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -51,19 +51,19 @@ body {
         transition: transform 1s;
     }
 
-    .button-1:hover::before{
+    .button-1:hover::before {
         transform: rotate(0deg);
     }
 
-    .button-2{
+    .button-2 {
         color: #351435;
         border-color: #351435;
         overflow: hidden;
         transition: all 1s;
     }
 
-    .button-2:before{
-        content: '';
+    .button-2:before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -75,11 +75,55 @@ body {
         transition: all 1s;
     }
 
-    .button-2:hover:before{
+    .button-2:hover:before {
         transform: translateX(0);
     }
 
-    .button-2:hover{
+    .button-2:hover {
         color: #fff;
+    }
+
+    .button-3 {
+        color: #262626;
+        border-color: #262626;
+        transform: all 1s;
+    }
+
+    .button-3:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #262626;
+        transform: rotateX(90deg);
+        transition: transform 1s;
+        z-index: -3;
+    }
+
+    .button-3:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #262626;
+        transform: rotateY(90deg);
+        transition: transform 1s;
+        z-index: -3;
+    }
+
+    .button-3:hover {
+        color: #fff;
+    }
+
+    .button-3:hover:before {
+        transform: rotateX(0deg);
+    }
+
+    .button-3:hover:after {
+        transform: rotateY(0deg);
     }
 }

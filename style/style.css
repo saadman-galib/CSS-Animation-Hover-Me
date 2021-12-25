@@ -39,7 +39,7 @@ body {
 }
 
 .button-container .button-1:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -64,7 +64,7 @@ body {
 }
 
 .button-container .button-2:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -82,4 +82,48 @@ body {
 
 .button-container .button-2:hover {
   color: #fff;
+}
+
+.button-container .button-3 {
+  color: #262626;
+  border-color: #262626;
+  transform: all 1s;
+}
+
+.button-container .button-3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transform: rotateX(90deg);
+  transition: transform 1s;
+  z-index: -3;
+}
+
+.button-container .button-3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transform: rotateY(90deg);
+  transition: transform 1s;
+  z-index: -3;
+}
+
+.button-container .button-3:hover {
+  color: #fff;
+}
+
+.button-container .button-3:hover:before {
+  transform: rotateX(0deg);
+}
+
+.button-container .button-3:hover:after {
+  transform: rotateY(0deg);
 }
