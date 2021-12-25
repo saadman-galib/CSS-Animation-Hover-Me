@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     a {
         text-decoration: none;
@@ -29,7 +30,7 @@ body {
         border: 2px solid #272727;
         padding: 20px 40px;
         position: relative;
-        
+        margin: 25px;
     }
 
     .button-1{
@@ -52,5 +53,33 @@ body {
 
     .button-1:hover::before{
         transform: rotate(0deg);
+    }
+
+    .button-2{
+        color: #351435;
+        border-color: #351435;
+        overflow: hidden;
+        transition: all 1s;
+    }
+
+    .button-2:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #351435;
+        height: 100%;
+        width: 100%;
+        z-index: -3;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+
+    .button-2:hover:before{
+        transform: translateX(0);
+    }
+
+    .button-2:hover{
+        color: #fff;
     }
 }
