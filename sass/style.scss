@@ -289,13 +289,64 @@ body {
         transition: 0.5s;
     }
 
-    .button-8:hover{
+    .button-8:hover {
         color: #fff;
     }
 
     .button-8:hover::before {
         border-radius: 0%;
         transform: translateY(0);
+    }
+
+    .button-9 {
+        // overflow: hidden;
+        background-color: #f1c40f;
+        border: none;
+        color: #fff;
+
+    }
+
+    .button-9:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "Hover Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #2ecc71;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        transform: rotateX(270deg);
+        transform-origin: top;
+        transition: 0.3s;
+    }
+
+    .button-9:after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "Hover Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: red;
+        height: 100%;
+        width: 100%;
+        transform: rotateX(270deg);
+        transform-origin: top;
+        transition: 0.3s;
+        transition-delay: 0.3s;
+        z-index: 4;
+    }
+
+    .button-9:hover:before {
+        transform: rotateX(0deg);
+    }
+
+    .button-9:hover:after {
+        transform: rotateX(0deg);
     }
 }
 
@@ -314,5 +365,5 @@ body {
 //     transition: 1s;
 // }
 
-// .button-1:hover::before {
+// .button-1:hover:before {
 // }

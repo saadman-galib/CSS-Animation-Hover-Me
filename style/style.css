@@ -297,3 +297,52 @@ body {
   border-radius: 0%;
   transform: translateY(0);
 }
+
+.button-container .button-9 {
+  background-color: #f1c40f;
+  border: none;
+  color: #fff;
+}
+
+.button-container .button-9:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2ecc71;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.button-container .button-9:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+  z-index: 4;
+}
+
+.button-container .button-9:hover:before {
+  transform: rotateX(0deg);
+}
+
+.button-container .button-9:hover:after {
+  transform: rotateX(0deg);
+}
