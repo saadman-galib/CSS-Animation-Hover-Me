@@ -15,7 +15,7 @@ body {
 }
 
 .button-container {
-    width: 70%;
+    width: 80%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -36,7 +36,7 @@ body {
         outline: none;
         padding: 20px 40px;
         position: relative;
-        margin: 25px;
+        margin: 30px 45px;
         cursor: pointer;
     }
 
@@ -55,7 +55,7 @@ body {
         z-index: -3;
         transform-origin: bottom left;
         transform: rotate(-90deg);
-        transition: transform 1s;
+        transition: transform 0.5s;
     }
 
     .button-1:hover::before {
@@ -66,7 +66,7 @@ body {
         color: #351435;
         border-color: #351435;
         overflow: hidden;
-        transition: all 1s;
+        transition: all 0.5s;
     }
 
     .button-2:before {
@@ -79,7 +79,7 @@ body {
         width: 100%;
         z-index: -3;
         transform: translateX(-100%);
-        transition: all 1s;
+        transition: all 0.5s;
     }
 
     .button-2:hover:before {
@@ -93,7 +93,7 @@ body {
     .button-3 {
         color: #262626;
         border-color: #262626;
-        transform: all 1s;
+        transform: all 0.5s;
     }
 
     .button-3:before {
@@ -105,7 +105,7 @@ body {
         height: 100%;
         background-color: #262626;
         transform: rotateX(90deg);
-        transition: transform 1s;
+        transition: transform 0.5s;
         z-index: -3;
     }
 
@@ -118,7 +118,7 @@ body {
         height: 100%;
         background-color: #262626;
         transform: rotateY(90deg);
-        transition: transform 1s;
+        transition: transform 0.5s;
         z-index: -3;
     }
 
@@ -139,7 +139,7 @@ body {
         border-color: #fff;
         background-color: #222;
         overflow: hidden;
-        transition: all 1s;
+        transition: all 0.5s;
         border: none;
     }
 
@@ -155,7 +155,7 @@ body {
         height: 100%;
         width: 100%;
         transform: translateY(-100%);
-        transition: all 1s;
+        transition: all 0.5s;
     }
 
     .button-4:hover:before {
@@ -303,7 +303,6 @@ body {
         background-color: #f1c40f;
         border: none;
         color: #fff;
-
     }
 
     .button-9:before {
@@ -348,6 +347,138 @@ body {
     .button-9:hover:after {
         transform: rotateX(0deg);
     }
+
+    .button-10 {
+        // overflow: hidden;
+        border-color: #ff0;
+        color: transparent;
+    }
+
+    .button-10:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "Hover Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #363636;
+        color: #ff0;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        transition: 0.3s;
+        transform: translateX(-100%) scale(0) rotateY(360deg);
+        opacity: 0;
+    }
+
+    .button-10:after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "Hover Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #363636;
+        color: #ff0;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        transition: 0.3s;
+        transform: translateX(0) scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+
+    .button-10:hover:before {
+        transform: translateX(0) scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+
+    .button-10:hover:after {
+        transform: translateX(100%) scale(0) rotateY(360deg);
+        opacity: 0;
+    }
+
+    .button-11 {
+        // overflow: hidden;
+        text-align: center;
+        text-transform: uppercase;
+        border-color: transparent;
+        color: #ff0;
+        transition: all 0.3s;
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff0;
+            z-index: -3;
+            border-radius: 8px;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+
+        &:hover span{
+            transform: scale(1);
+            transition-delay: 0.4s;
+        }
+    }
+    .button-11:before,
+    .button-11:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        // left: 0;
+        background-color: #ff0;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .button-11:before {
+        left: 0;
+        box-shadow: -100px 0 0;
+        z-index: -4;
+    }
+
+    .button-11:after {
+        right: 0;
+        box-shadow: 100px 0 0;
+        z-index: -4;
+    }
+
+    .button-11:hover{
+        transition-delay: 0.3s;
+        color: #262626;
+    }
+
+    .button-11:hover:before {
+        left: 50%;
+        box-shadow: 30px 0 0;
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 1;
+    }
+
+    .button-11:hover:after {
+        right: 50%;
+        box-shadow: -30px 0 0;
+        transform: translateX(50%) translateY(-50%);
+        opacity: 1;
+    }
+}
+
+.align-center {
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // .button-1 {
