@@ -10,6 +10,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
+    // background-color: #222;
 }
 
 .button-container {
@@ -35,6 +36,7 @@ body {
 
     .button-1 {
         overflow: hidden;
+        // background-color: #fff;
     }
 
     .button-1:before {
@@ -60,6 +62,7 @@ body {
         border-color: #351435;
         overflow: hidden;
         transition: all 1s;
+        // background-color: #fff;
     }
 
     .button-2:before {
@@ -87,6 +90,7 @@ body {
         color: #262626;
         border-color: #262626;
         transform: all 1s;
+        // background-color: #fff;
     }
 
     .button-3:before {
@@ -157,5 +161,36 @@ body {
 
     .button-4:hover {
         color: #fff;
+    }
+
+    .button-5 {
+        color: #fff;
+        border-color: #fff;
+        background-color: #222;
+        overflow: hidden;
+        transition: all 0.3s;
+        position: relative;
+    }
+
+    .button-5:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;;
+        height: 25px;
+        width: 100%;
+        transform: translateX(-100%) rotate(45deg);
+        // z-index: -3;
+        
+        transition: all 0.3s;
+    }
+
+    .button-5:hover:before {
+        transform: translateX(100%) rotate(45deg);
+    }
+
+    .button-5:hover {
+        background-color: #f44336;
     }
 }

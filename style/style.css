@@ -158,3 +158,32 @@ body {
 .button-container .button-4:hover {
   color: #fff;
 }
+
+.button-container .button-5 {
+  color: #fff;
+  border-color: #fff;
+  background-color: #222;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.button-container .button-5:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 25px;
+  width: 100%;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+.button-container .button-5:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+.button-container .button-5:hover {
+  background-color: #f44336;
+}
