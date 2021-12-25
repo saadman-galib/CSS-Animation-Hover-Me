@@ -137,6 +137,7 @@ body {
         background-color: #222;
         overflow: hidden;
         transition: all 1s;
+        border: none;
     }
 
     .button-4:before {
@@ -166,6 +167,7 @@ body {
     .button-5 {
         color: #fff;
         border-color: #fff;
+        border: none;
         background-color: #222;
         overflow: hidden;
         transition: all 0.3s;
@@ -193,4 +195,75 @@ body {
     .button-5:hover {
         background-color: #f44336;
     }
+
+    .button-6 {
+        overflow: hidden;
+        color: transparent;
+        background-color: #262626;
+    }
+
+    .button-6:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "Hover Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fffa65;
+        color: #262626;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.5s;
+        
+    }
+
+    .button-6:after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "Hover Me";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fffa65;
+        color: #262626;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.5s;
+        transform: translate(-100%, 100%);
+    }
+
+
+    .button-6:hover:before {
+        transform: translate(100%, -100%);
+    }
+
+    .button-6:hover:after {
+        transform: translateX(0);
+    }
 }
+
+
+// .button-1 {
+//     overflow: hidden;
+//     // background-color: #fff;
+// }
+
+// .button-1:before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-color: #fff200;
+//     height: 100%;
+//     width: 100%;
+//     z-index: -3;
+//     transform-origin: bottom left;
+//     transform: rotate(-90deg);
+//     transition: transform 1s;
+// }
+
+// .button-1:hover::before {
+//     transform: rotate(0deg);
+// }
